@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hover In/Out</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $('img').hover(function(){
+                    $(this).attr('src',$(this).attr('data-src1'))
+                }, function(){$(this).attr('src',$(this).attr('data-src'))})
+            })
+        </script>
+    </head>
+<body>
+    <div id="container">
+        <h1>Hover the mouse over the images to discover their location.</h1>
+        <div id="art">
+            <img src="img/londonart.jpg" data-src="img/londonart.jpg" data-src1="img/london.jpg" alt="london mural">
+            <img src="img/newyorkart.jpg" data-src="img/newyorkart.jpg" data-src1="img/newyork.jpg" alt="new york mural">
+            <img src="img/sanfranciscoart.jpg" data-src="img/sanfranciscoart.jpg" data-src1="img/sanfrancisco.jpg" alt="san francisco mural">
+            <img src="img/lisbonart.jpg" data-src="img/lisbonart.jpg" data-src1="img/lisbon.jpg" alt="lisbon mural">
+        </div>
+    </div>
+</body>
+</html>
